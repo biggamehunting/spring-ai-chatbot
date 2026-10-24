@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-ai-chatbot
+  ai:
+    openai:
+      # Set OPENAI_API_KEY in your environment; do not commit secrets.
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: ${OPENAI_MODEL:gpt-4o-mini}
+          temperature: 0.3
+
+server:
+  port: 8080
